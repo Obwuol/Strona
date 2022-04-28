@@ -1,172 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-    />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-  </head>
-  <body class="col-md-12" style="background-color: skyblue;">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
-          alt="MDB Logo"
-          loading="lazy"
-        />
-      </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="start.html">Start</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Samochody.html">Samochody</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-    </div>
-    <!-- Collapsible wrapper -->
-
-    <!-- Right elements -->
-    <div class="d-flex align-items-center">
-      <!-- Icon -->
-      <a class="text-reset me-3" href="#">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
-
-
-      <!-- Avatar -->
-      <div class="dropdown">
-        <a
-          class="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuAvatar"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            class="rounded-circle"
-            height="25"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          />
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuAvatar"
-        >
-          <li>
-            <a class="dropdown-item" href="#">Start</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Samochody</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Right elements -->
+<html>
+  
+<head>
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .input-icons i {
+            position: absolute;
+        }
+          
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+          
+        .icon {
+            padding: 10px;
+            min-width: 40px;
+        }
+          
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+  
+<body>
+    <h3>
+      Icons inside the input element
+  </h3>
+    <div style="max-width:400px;margin:auto">
+        <div class="input-icons">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-instagram icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-envelope icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-youtube icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-facebook icon"></i>
+            <input class="input-field" type="text">
+        </div>
   </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
-<div class="row">
-  <div class="col-md-8">
-    <!-- Spied element -->
-    <div
-      data-mdb-spy="scroll"
-      data-mdb-target="#scrollspy1"
-      data-mdb-offset="0"
-      class="scrollspy-example"
-    >
-      <section id="example-1">
-        <h3>
-
-          <img src="../img/bmw1.png" alt="bmw">
-
-        </h3>
-        ...
-      </section>
-      <section id="example-3">
-        <h3>
-
-          <img src="../img/bmw4.png" alt="bmw">
-
-        </h3>
-          ...
-        </section>
-      </section>
-      <section id="example-4">
-        <h3>
-
-          <img src="../img/bmw5.png" alt="bmw">
-
-        </h3>
-        ...
-      </section>
-    </div>
-    <!-- Spied element -->
-  </div>
-
-  <div class="col-md-2" style="background-color: white;">
-    <!-- Scrollspy -->
-    <div id="scrollspy1" class="sticky-top">
-      <ul class="nav flex-column nav-pills menu-sidebar">
-        <span class="border border-5">
-        <li class="nav-item">
-          <a class="nav-link" href="#example-1">Section 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#example-3">Section 2</a>
-          <ul class="nav flex-column ps-3">
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#example-4">Section 3</a>
-        </li>
-        </span>
-      </ul>
-    </div>
-    <!-- Scrollspy -->
-  </div>
-</div>
-
-  </body>
+</body>
+  
 </html>

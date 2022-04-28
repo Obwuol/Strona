@@ -4,166 +4,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
+    <title>Podróbka strony edge</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <!-- Google Fonts Roboto -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
-    <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
-  </head>
-  <body class="col-md-12" style="background-image: url(../img/droga4.jpg); background-size: 100% 100%;">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
+    <link href="css/all.css" rel="stylesheet">
 
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    
+    <!-- Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url(../img/niebo.jfif) ; height: 155px;">
+  <div class="container-fluid justify-content-between">
+    <!-- Left elements -->
+    <div class="d-flex">
+      <!-- Brand -->
+      <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
         <img
           src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
+          height="20"
           alt="MDB Logo"
           loading="lazy"
+          style="margin-top: 2px;"
         />
       </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="start.html">Start</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Samochody.html">Samochody</a>
-        </li>
-      </ul>
-      <!-- Left links -->
+
+      <!-- Search form -->
     </div>
-    <!-- Collapsible wrapper -->
+    <!-- Left elements -->
+
+    <!-- Center elements -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8 text-center"><div class="container-fluid">
+          <form class="d-flex input-group w-auto">
+            <input
+              type="search"
+              class="form-control rounded-pill"
+              placeholder="Wyszukaj w sieci web"
+              aria-label="Search"
+              aria-describedby="search-addon"
+              style="background-color: gray; color: white; height: 60px; border-color: gray; text-emphasis-color: white;"
+            />
+            <span class="input-group-text border-0" id="search-addon" style="position: absolute; padding-top: 22px; padding-left: 96%;">
+              <i class="fas fa-search"></i>
+            </span>
+          </form>
+        </div></div>
+        <div class="col-2"></div>
+      </div>
+      </div>
+      
+      
+
+    <!-- Center elements -->
 
     <!-- Right elements -->
-    <div class="d-flex align-items-center">
-      <!-- Icon -->
-      <a class="text-reset me-3" href="#">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+            class="rounded-circle"
+            height="22"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+          <strong class="d-none d-sm-block ms-1"></strong>
+        </a>
+      </li>
+      <li class="nav-item me-3 me-lg-1">
 
-
-      <!-- Avatar -->
-      <div class="dropdown">
+      <li class="nav-item dropdown me-3 me-lg-1">
         <a
-          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          class="nav-link dropdown-toggle hidden-arrow"
           href="#"
-          id="navbarDropdownMenuAvatar"
+          id="navbarDropdownMenuLink"
           role="button"
           data-mdb-toggle="dropdown"
           aria-expanded="false"
         >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            class="rounded-circle"
-            height="25"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          />
+          <i class="fas fa-bell fa-lg"></i>
+          <span class="badge rounded-pill badge-notification bg-danger"></span>
         </a>
         <ul
           class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuAvatar"
+          aria-labelledby="navbarDropdownMenuLink"
         >
           <li>
-            <a class="dropdown-item" href="#">Start</a>
+            <a class="dropdown-item" href="#">Some news</a>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Samochody</a>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
           </li>
         </ul>
-      </div>
-    </div>
-
+      </li>
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a
+          class="nav-link dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item me-3 me-lg-1 active">
+        <a class="nav-link" href="#">
+          <span><i class="fas fa-home fa-lg"></i></span>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+      </li>
+    </ul>
     <!-- Right elements -->
   </div>
-  <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-<div class="row">
-  <div class="col-md-8">
-    <!-- Spied element -->
-    <div
-      data-mdb-spy="scroll"
-      data-mdb-target="#scrollspy1"
-      data-mdb-offset="0"
-      class="scrollspy-example"
-    >
-      <section id="example-1">
-        <a rel="stylesheet" href="bmw3.html">
 
-          <img src="../img/bmw1.png" class="img-fluid rounded-4 hover-shadow" alt="bmw">
-
-        </a>
-        
-      </section>
-      <section id="example-3">
-        <a rel="stylesheet" href="bmw3.html">
-          <img src="../img/bmw4.png" class="img-fluid rounded-4 hover-shadow" alt="bmw">
-
-        </a>
-          
-        </section>
-      </section>
-      <section id="example-4">
-        <a rel="stylesheet" href="bmw3.html">
-          <img src="../img/bmw5.png" class="img-fluid rounded-4 hover-shadow" alt="bmw">
-
-        </a>
-        
-      </section>
-    </div>
-    <!-- Spied element -->
-  </div>
-
-  <div class="col-md-2" style="background-color: white;">
-    <!-- Scrollspy -->
-    <div id="scrollspy1" class="sticky-top">
-      <ul class="nav flex-column nav-pills menu-sidebar">
-        <span class="border border-5" style="background-color: white;">
-        <li class="nav-item">
-          <a class="nav-link" href="#example-1">Section 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#example-3">Section 2</a>
-          <ul class="nav flex-column ps-3">
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#example-4">Section 3</a>
-        </li>
-        </span>
-      </ul>
-    </div>
-    <!-- Scrollspy -->
-  </div>
-</div>
   </body>
 </html>
