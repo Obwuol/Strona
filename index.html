@@ -21,136 +21,58 @@
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <style>
+  .hide {
+      display: none ; 
+     }
+       @media  only screen and (max-width: 992px) {
+  .show {
+      display: none ; 
+      border: 2px solid black ;
+     }
+  .hide 
+  { display: block ;}   
+     }
 
-    
-    <!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url(../img/niebo.jfif) ; height: 155px;">
-  <div class="container-fluid justify-content-between">
-    <!-- Left elements -->
-    <div class="d-flex">
-      <!-- Brand -->
-      <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="20"
-          alt="MDB Logo"
-          loading="lazy"
-          style="margin-top: 2px;"
-        />
-      </a>
-
-      <!-- Search form -->
-    </div>
-    <!-- Left elements -->
-
-    <!-- Center elements -->
-
-    <div class="container">
-      <div class="row">
-        <div class="col-2">
-        </div>
-        <div class="col-8 text-center"><div class="container-fluid">
-          <form class="d-flex input-group w-auto">
-            <input
-              type="search"
-              class="form-control rounded-pill"
-              placeholder="Wyszukaj w sieci web"
-              aria-label="Search"
-              aria-describedby="search-addon"
-              style="background-color: gray; color: white; height: 60px; border-color: gray; text-emphasis-color: white;"
-            />
-            <span class="input-group-text border-0" id="search-addon" style="position: absolute; padding-top: 22px; padding-left: 96%;">
-              <i class="fas fa-search"></i>
-            </span>
-          </form>
-        </div></div>
-        <div class="col-2"></div>
-      </div>
-      </div>
-      
-      
-
-    <!-- Center elements -->
-
-    <!-- Right elements -->
-    <ul class="navbar-nav flex-row">
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
-            class="rounded-circle"
-            height="22"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          />
-          <strong class="d-none d-sm-block ms-1"></strong>
-        </a>
-      </li>
-      <li class="nav-item me-3 me-lg-1">
-
-      <li class="nav-item dropdown me-3 me-lg-1">
-        <a
-          class="nav-link dropdown-toggle hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <i class="fas fa-bell fa-lg"></i>
-          <span class="badge rounded-pill badge-notification bg-danger"></span>
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuLink"
-        >
-          <li>
-            <a class="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown me-3 me-lg-1">
-        <a
-          class="nav-link dropdown-toggle hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuLink"
-        >
-          <li>
-            <a class="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item me-3 me-lg-1 active">
-        <a class="nav-link" href="#">
-          <span><i class="fas fa-home fa-lg"></i></span>
-          <span class="badge rounded-pill badge-notification bg-danger">1</span>
-        </a>
-      </li>
-    </ul>
-    <!-- Right elements -->
+     
+    </style>
+    <div style="background-image: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4RbvH?ver=6355'); height: 90px;">
+<div class="row d-flex flex-wrap bd-highlight" >
+  <div class="order-2 order-lg-1 col-6 col-lg-3 p-3" style="text-align: center;">
+    <p style="float: left ;font-size: 25px; color: white;"><img src="../img/waffle.webp" style="width: 50px; height: 50px;">&nbsp;&nbsp;<img src="https://assets.msn.com/bundles/v1/weather/latest/SunnyDayV3.svg" style="height: 30px; width: 30px;"> 16<span style="font-size: 20px; color: white;">°C</span> &nbsp;&nbsp;</p>
   </div>
-</nav>
-<!-- Navbar -->
+  <div class="order-1 order-lg-2 col-12 col-lg-6">
+    <nav class="col-10 p-4" style="margin: auto;">
+        <form class="d-flex input-group w-auto">
+          <input
+            type="search"
+            class="form-control rounded-pill"
+            placeholder="Wyszukaj w sieci Web"
+            aria-label="Search"
+            aria-describedby="search-addon"
+            style="height: 40px; background-color: rgb(73, 73, 73); border-color: rgb(73, 73, 73); color: white;"
+          />
+        </form>
+    </nav>
+  </div>
+  <div class="order-3 order-lg-3 col-6 col-lg-3 p-4">
+    <div class="d-flex align-items-center" style="float: right;">
+      <button type="button" class=" me-3 rounded-pill" style="border-color: rgba(255, 255, 255, 0.616); border-width: 1px; background: none; color: white; font-size: 14px;">
+        <img src="../img/acc.png" style="width: 45px;height: 30px;"> Zaloguj się
+      </button>
+      <img src="../img/bell.png" style="width: 30px;height: 30px;">
+      <p>&nbsp;&nbsp;</p>
+      <img src="../img/gear.png" style="width: 30px;height: 30px;">
+    </div>
+
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+
 
   </body>
 </html>
