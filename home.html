@@ -17,6 +17,14 @@
         height: 100px;
         width: 100px;
       }
+      .invisible{
+        display: none;
+      }
+      .buttonVisible{
+        display: block;
+        width: 100px; 
+        height: 50px;
+      }
     </style>
 
 <h1 class="animate__animated animate__bounce">An animated element</h1>
@@ -25,7 +33,7 @@
 <script type="text/javascript" src="../js/app.js"></script>
 <hr>
     <div>
-<table id="tabela" border="1px" style="border-color: rebeccapurple; border-spacing: 0px; text-align: center; font-size: 70px; ">
+<table id="tabela" border="1px" style="border-color: rebeccapurple; border-spacing: 0px; text-align: center; font-size: 70px;">
 <tr>
  <td id="p1"></td>
  <td id="p2"></td>
@@ -42,7 +50,7 @@
  <td id="p9"></td>
 </tr>
 </table>
-<button>RESET</button>
+<button id="reset" class="invisible">RESET</button>
   </div>
 <div id="info" style="text-align: center;"></div>
 
