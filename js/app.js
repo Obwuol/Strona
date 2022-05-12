@@ -1,7 +1,9 @@
 startPoint = "x" ;
+var remis = 0 ;
 
 tabela.addEventListener("click",clickField) ;
 function clickField(e){
+    remis ++ ;
     console.log(e.target) ;
 
     if(e.target.innerHTML == ""){
@@ -38,6 +40,7 @@ function clickField(e){
         document.getElementById("p3").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn2 == "xxx"){
         document.getElementById("p4").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -45,6 +48,7 @@ function clickField(e){
         document.getElementById("p6").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn3 == "xxx"){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -52,6 +56,7 @@ function clickField(e){
         document.getElementById("p9").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn4 == "xxx"){
         document.getElementById("p1").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -59,6 +64,7 @@ function clickField(e){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn5 == "xxx"){
         document.getElementById("p2").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -66,6 +72,7 @@ function clickField(e){
         document.getElementById("p6").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn6 == "xxx"){
         document.getElementById("p3").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -73,6 +80,7 @@ function clickField(e){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn7 == "xxx"){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -80,6 +88,7 @@ function clickField(e){
         document.getElementById("p3").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn8 == "xxx"){
         document.getElementById("p1").innerHTML = '<div style="color:lime;">x</div>' ;
@@ -87,6 +96,7 @@ function clickField(e){
         document.getElementById("p9").innerHTML = '<div style="color:lime;">x</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
 
 
@@ -99,6 +109,7 @@ function clickField(e){
         document.getElementById("p3").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn2 == "ooo"){
         document.getElementById("p4").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -106,6 +117,7 @@ function clickField(e){
         document.getElementById("p6").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn3 == "ooo"){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -113,6 +125,7 @@ function clickField(e){
         document.getElementById("p9").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn4 == "ooo"){
         document.getElementById("p1").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -120,6 +133,7 @@ function clickField(e){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn5 == "ooo"){
         document.getElementById("p2").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -127,6 +141,7 @@ function clickField(e){
         document.getElementById("p6").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn6 == "ooo"){
         document.getElementById("p3").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -134,6 +149,7 @@ function clickField(e){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn7 == "ooo"){
         document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -141,6 +157,7 @@ function clickField(e){
         document.getElementById("p3").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
+        remis = 0 ;
     }
     if(wyn8 == "ooo"){
         document.getElementById("p1").innerHTML = '<div style="color:lime;">o</div>' ;
@@ -148,9 +165,13 @@ function clickField(e){
         document.getElementById("p9").innerHTML = '<div style="color:lime;">o</div>' ;
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        document.getElementById("reset").className = 'buttonVisible' ;
+        remis = 0 ;
     }
 
+    if(remis == 9){
+        document.getElementById("info").innerHTML = '<div style="font-size:70px;">REMIS</div>' ;
+        remis = 0 ;
+    }
 }
 
 reset.addEventListener("click",action) ;
@@ -166,6 +187,9 @@ function action(e){
     document.getElementById("p8").innerHTML = "" ;
     document.getElementById("p9").innerHTML = "" ;
     document.getElementById("info").innerHTML = "";
+    tabela.addEventListener("click",clickField) ;
+    remis = 0 ;
+    startPoint = "x" ;
 
 } 
 
