@@ -1,6 +1,7 @@
 startPoint = "x" ;
 var remis = 0 ;
-
+var p = [1,2,3,4,5] ;
+console.log(p[2])
 tabela.addEventListener("click",clickField) ;
 function clickField(e){
     remis ++ ;
@@ -14,89 +15,86 @@ function clickField(e){
             startPoint = "x"
         }
     }
-    p1 = document.getElementById("p1").innerHTML ;
-    p2 = document.getElementById("p2").innerHTML ;
-    p3 = document.getElementById("p3").innerHTML ;
-    p4 = document.getElementById("p4").innerHTML ;
-    p5 = document.getElementById("p5").innerHTML ;
-    p6 = document.getElementById("p6").innerHTML ;
-    p7 = document.getElementById("p7").innerHTML ;
-    p8 = document.getElementById("p8").innerHTML ;
-    p9 = document.getElementById("p9").innerHTML ;
 
-    wyn1 = p1 + p2 + p3 ;
-    wyn2 = p4 + p5 + p6 ;
-    wyn3 = p7 + p8 + p9 ;
-    wyn4 = p1 + p4 + p7 ;
-    wyn5 = p2 + p5 + p8 ;
-    wyn6 = p3 + p6 + p9 ;
-    wyn7 = p7 + p5 + p3 ;
-    wyn8 = p1 + p5 + p9 ;
+    for(x=1 ; x<10 ; x++){
+      p[x] = document.getElementById("p"+x).innerHTML ;    
+    }
+
+   // p1 = document.getElementById("p1").innerHTML ;
+   // p2 = document.getElementById("p2").innerHTML ;
+   // p3 = document.getElementById("p3").innerHTML ;
+   // p4 = document.getElementById("p4").innerHTML ;
+   // p5 = document.getElementById("p5").innerHTML ;
+   // p6 = document.getElementById("p6").innerHTML ;
+   // p7 = document.getElementById("p7").innerHTML ;
+   // p8 = document.getElementById("p8").innerHTML ;
+   // p9 = document.getElementById("p9").innerHTML ;
+
+    wyn1 = p[1] + p[2] + p[3] ;
+    wyn2 = p[4] + p[5] + p[6] ;
+    wyn3 = p[7] + p[8] + p[9] ;
+    wyn4 = p[1] + p[4] + p[7] ;
+    wyn5 = p[2] + p[5] + p[8] ;
+    wyn6 = p[3] + p[6] + p[9] ;
+    wyn7 = p[7] + p[5] + p[3] ;
+    wyn8 = p[1] + p[5] + p[9] ;
 
     console.log(wyn1) ;
     if(wyn1 == "xxx"){
-        document.getElementById("p1").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p2").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p3").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=1 ; x<4 ; x++){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn2 == "xxx"){
-        document.getElementById("p4").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p6").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=4 ; x<7 ; x++){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn3 == "xxx"){
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p8").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p9").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=7 ; x<10 ; x++){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn4 == "xxx"){
-        document.getElementById("p1").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p4").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=1 ; x<8 ; x+= 3){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn5 == "xxx"){
-        document.getElementById("p2").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p6").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=2 ; x<9 ; x+= 3){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn6 == "xxx"){
-        document.getElementById("p3").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p6").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=3 ; x<10 ; x+= 3){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn7 == "xxx"){
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p3").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=3 ; x<8 ; x+= 2){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn8 == "xxx"){
-        document.getElementById("p1").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">x</div>' ;
-        document.getElementById("p9").innerHTML = '<div style="color:lime;">x</div>' ;
+        for(x=1 ; x<10 ; x+= 4){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">x</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KRZYŻYKI</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
 
 
@@ -104,68 +102,60 @@ function clickField(e){
 
 
     if(wyn1 == "ooo"){
-        document.getElementById("p1").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p2").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p3").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=1 ; x<4 ; x++){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn2 == "ooo"){
-        document.getElementById("p4").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p6").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=4 ; x<7 ; x++){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn3 == "ooo"){
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p8").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p9").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=7 ; x<10 ; x++){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn4 == "ooo"){
-        document.getElementById("p1").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p4").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=1 ; x<8 ; x+= 3){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn5 == "ooo"){
-        document.getElementById("p2").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p6").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=2 ; x<9 ; x+= 3){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn6 == "ooo"){
-        document.getElementById("p3").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p6").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=3 ; x<10 ; x+= 3){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn7 == "ooo"){
-        document.getElementById("p7").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p3").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=3 ; x<8 ; x+= 2){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
     if(wyn8 == "ooo"){
-        document.getElementById("p1").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p5").innerHTML = '<div style="color:lime;">o</div>' ;
-        document.getElementById("p9").innerHTML = '<div style="color:lime;">o</div>' ;
+        for(x=1 ; x<10 ; x+= 4){
+            document.getElementById("p"+x).innerHTML = '<div style="color:lime;">o</div>' ;
+        }
         document.getElementById("info").innerHTML = '<div style="font-size:70px;">WYGRAŁY KÓŁKA</div>' ;
         tabela.removeEventListener("click",clickField) ;
-        remis = 0 ;
     }
 
     if(remis == 9){
