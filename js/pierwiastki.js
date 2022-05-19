@@ -1,14 +1,9 @@
 var pierwiastki = [] ;
 var y = 0 ;
 
-
-
 container = document.getElementsByClassName("symbol") ;
 
-
-
 function randomElements(){
-
 
 
 //console.log(container.length) ;
@@ -51,5 +46,7 @@ hard.addEventListener('click',gameStart) ;
 function gameStart(e){
     console.log(e.target.id) ;
     randomElements() ;
+    document.getElementById("input").className = "show"
+    document.getElementById("buttonStart").className = "hide"
 }
 
