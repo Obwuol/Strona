@@ -4,7 +4,13 @@ var y = 0 ;
 
 
 container = document.getElementsByClassName("symbol") ;
+
+
+
 function randomElements(){
+
+
+
 //console.log(container.length) ;
 for(x = 0; x<container.length; x++){
     if(container[x].textContent != "DE" 
@@ -46,5 +52,4 @@ function gameStart(e){
     console.log(e.target.id) ;
     randomElements() ;
 }
-
 

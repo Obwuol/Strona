@@ -185,6 +185,61 @@ rel="stylesheet"
   p.gone{
     visibility: hidden;
   }
+  * { box-sizing: border-box; }
+body {
+  font: 16px Arial;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
   </style>
   </head>
   <body background="https://i.lensdump.com/i/8GUtVK.jpg" style="background-color:black;">
@@ -198,10 +253,7 @@ rel="stylesheet"
 
 
 
-   <div class="form-outline" style="margin: auto; width: 107px;">
-    <input type="text" id="form12" class="form-control" placeholder="Pierwiastek" style="background-color: gray; color: white;"/>
-    <label class="form-label" for="form12"></label>
-</div>
+
 
   <!--row 1-->
   <div class="container">
@@ -435,6 +487,7 @@ rel="stylesheet"
  
 <br>
 <br>
+
 <div class="d-flex justify-content-center">
 <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal" style="background-color: purple;">
   Poziom trudności
@@ -459,7 +512,12 @@ rel="stylesheet"
     </div>
   </div>
 </div>
-
+<br>
+    <form autocomplete="off" style="text-align:center;border-radius: 20px;">
+      <div class="autocomplete" style="width:300px;">
+        <input id="myInput" type="text" name="myCountry" placeholder="Pierwiastek">
+      </div>
+    </form>
 
 
   
@@ -474,10 +532,14 @@ rel="stylesheet"
 
     <script type="text/javascript" src="../js/pierwiastki.js"></script>
     <script type="text/javascript" src="../js/pierwiastek.js"></script>
+    <script type="text/javascript" src="../js/autocomplete.js"></script>
     <!-- MDB -->
 <script
 type="text/javascript"
 src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
 ></script>
+    <script>
+    autocomplete(document.getElementById("myInput"), countries);
+    </script>
 </body>
 </html>
