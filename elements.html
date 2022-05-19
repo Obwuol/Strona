@@ -2,6 +2,21 @@
   <html>
   
   <head>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+rel="stylesheet"
+/>
   <style>
   .container {
     display: flex;
@@ -31,7 +46,7 @@
   
   .green {
     position:relative;
-    background-color: lightgreen;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -41,7 +56,7 @@
   
   .dark_green {
     position:relative;
-    background-color: darkgreen;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -51,7 +66,7 @@
   
   .lime_green {
     position:relative;
-    background-color: #80ffd4;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -61,7 +76,7 @@
   
   .pink{
     position:relative;
-    background-color: #ff33bb;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -71,7 +86,7 @@
   
   .blue {
     position:relative;
-    background-color: lightblue;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -81,7 +96,7 @@
   
   .orange {
     position:relative;
-    background-color: #f7d076;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -91,7 +106,7 @@
   
   .dark_orange {
     position:relative;
-    background-color: #b35900;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -101,7 +116,7 @@
   
   .red {
     position:relative;
-    background-color:#ffb3b3 ;
+    background-color:gray ;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -111,7 +126,7 @@
   
   .dark_red {
     position:relative;
-    background-color:#992600 ;
+    background-color:gray ;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -121,7 +136,7 @@
   
   .yellow {
     position:relative;
-    background-color: #e6f776;
+    background-color: gray;
     width: 5vw;
     height: 5vh;
     padding: 2px;
@@ -142,6 +157,15 @@
 
   .checked {
     position:relative;
+    background-color: yellow;
+    width: 5vw;
+    height: 5vh;
+    padding: 2px;
+    margin: 2px;
+    float: left;
+  }
+  .true {
+    position:relative;
     background-color: greenyellow;
     width: 5vw;
     height: 5vh;
@@ -149,14 +173,36 @@
     margin: 2px;
     float: left;
   }
-  
+  .false {
+    position:relative;
+    background-color: red;
+    width: 5vw;
+    height: 5vh;
+    padding: 2px;
+    margin: 2px;
+    float: left;
+  }
   p.gone{
     visibility: hidden;
-  }  
+  }
   </style>
   </head>
   <body background="https://i.lensdump.com/i/8GUtVK.jpg" style="background-color:black;">
-  
+
+
+
+
+
+
+
+
+
+
+   <div class="form-outline" style="margin: auto; width: 107px;">
+    <input type="text" id="form12" class="form-control" placeholder="Pierwiastek" style="background-color: gray; color: white;"/>
+    <label class="form-label" for="form12"></label>
+</div>
+
   <!--row 1-->
   <div class="container">
     <div  class="green"> <div class="dr"><small>1.008</small></div> <div class="symbol"><b>H</b></div>  <div class="num_of_ele"><small>1</small></div></div>
@@ -386,7 +432,40 @@
     <div class="dark_red">  <div class="dr"><small>259</small></div>   <div class="symbol"><b>No</b></div> <div class="num_of_ele"><small>102</small></div> </div>
     <div class="dark_red">  <div class="dr"><small>266</small></div>   <div class="symbol"><b>Lr</b></div> <div class="num_of_ele"><small>103</small></div> </div>
   </div>
+ 
+<br>
+<br>
+<div class="d-flex justify-content-center">
+<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal" style="background-color: purple;">
+  Poziom trudności
+</button>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Poziom trudności</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div style="text-align: center;color: black;">
+              <button id="easy" type="button" class="btn btn-success m-2"data-mdb-dismiss="modal">Łatwy</button>
+              <button id="normal" type="button" class="btn btn-warning m-2"data-mdb-dismiss="modal">Normalny</button>
+              <button id="hard" type="button" class="btn btn-danger m-2" data-mdb-dismiss="modal">Trudny</button>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
   
+
+
+
   </body>
   </html>
 
@@ -395,5 +474,10 @@
 
     <script type="text/javascript" src="../js/pierwiastki.js"></script>
     <script type="text/javascript" src="../js/pierwiastek.js"></script>
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
 </body>
 </html>
