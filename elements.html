@@ -2,6 +2,7 @@
   <html>
   
   <head>
+    <meta charset="utf-8">
     <!-- Font Awesome -->
 <link
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -522,11 +523,11 @@ textarea:focus, input:focus{
 <br>
     
 
-<form id="input" autocomplete="off" style="text-align:center;border-radius: 20px;" class="hide">
-  <div id="startBtn" class="autocomplete" style="width:300px;">
-    <input id="myInput" type="text" name="myCountry" placeholder="Pierwiastek">
+<div id="input" class="hide">
+  <div id="startBtn" class="autocomplete" style="width:300px;text-align:center;border-radius: 20px;" >
+    <input id="inputAuto" type="text" name="myCountry" placeholder="Pierwiastek" onkeypress="checkQuestion(event)">
   </div>
-</form>
+</div>
   
 
     <script type="text/javascript" src="../js/pierwiastki.js"></script>
