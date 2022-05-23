@@ -1,7 +1,7 @@
 var countries = [];
 
-for(x=0 ; x<pierwiastek.length ; x++){
-    countries.push(pierwiastek[x][1]) ;
+for(x=0 ; x<elements.length ; x++){
+    countries.push(elements[x][1]) ;
 }
 
 function autocomplete(inp, arr) {

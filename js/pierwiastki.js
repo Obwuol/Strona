@@ -1,76 +1,87 @@
-var pierwiastki = [] ;
-var odp1 = "" ;
+var elementsTable = [] ;
+var elementChoosed = [] ;
+var answer = "";
 var y = 0 ;
-
-container = document.getElementsByClassName("symbol") ;
-
+var k=0 ;
+h = 0 ;
+var point = 0;
+container = document.getElementsByClassName("symbol");
+for(x = 0; x < container.length; x++){
+  if(container[x].textContent != "DE"
+  && container[x].textContent != "DEL"
+  && container[x].textContent != "57-71" 
+  && container[x].textContent != "89-103"  ){
+      elementsTable[y] = container[x] ;
+      y++ ;
+  }
+}
+document.getElementById("score").classList.remove("hide");
 function randomElements(){
-
-
-//console.log(container.length) ;
-for(x = 0; x<container.length; x++){
-    if(container[x].textContent != "DE" 
-    && container[x].textContent != "57-71" 
-    && container[x].textContent != "89-103"){
-        pierwiastki[y] = container[x].textContent ;
-        y++ ;
-    }
+if(elementChoosed.length < elements.length){
+random = Math.floor(Math.random() * elements.length) ;
+answer = elements[random][1];
+randomElement = elementsTable[random].parentNode ;
+if (elementChoosed.includes(random)){
+       randomElements();
+} else {
+randomElement.setAttribute("class","checked");
+elementChoosed.push(random);
+}
+} else {
+  
+}
 }
 
-for(x = 0; x<pierwiastki.length; x++){
-//    console.log("x:"+x +"," +pierwiastki[x]) ;
-}
+const easy = document.getElementById("easy");
+const medium = document.getElementById("medium");
+const hard = document.getElementById("hard");
 
-random = Math.floor(Math.random() * pierwiastki.length) ;
-console.log(pierwiastki[random]) ;
-
-
-
-for(x = 0; x<container.length; x++){
-    if(container[x].textContent == pierwiastki[random]){
-        wylosowany = container[x] ;
-    }
-}
-
-console.log(wylosowany) ;
-wylosowany = wylosowany.parentNode ;
-
-wylosowany.setAttribute("class","checked")
-console.log(wylosowany) ;
-
-odp1 = pierwiastek[random][1] ;
-console.log("odp1: "+odp1) ;
-}
-
-const easy = document.getElementById("easy") ;
-const normal = document.getElementById("normal") ;
-const hard = document.getElementById("hard") ;
-
-easy.addEventListener('click',gameStart) ;
-normal.addEventListener('click',gameStart) ;
-hard.addEventListener('click',gameStart) ;
+easy.addEventListener('click',gameStart);
+medium.addEventListener('click',gameStart);
+hard.addEventListener('click',gameStart);
 
 function gameStart(e){
-    console.log(e.target.id) ;
-    randomElements() ;
-    document.getElementById("input").className = "show"
-    document.getElementById("buttonStart").className = "hide"
+  randomElements();
+  document.getElementById("startButton").className = "hide"
+  document.getElementById("inputAuto").className = "show"
+  document.getElementById("resetButton").className = "show btn btn-info"
+  document.getElementById("score").className.add("show");
+  
 }
 
 function checkQuestion(event){
-    if(event.keyCode == 13){
-      inputAuto = document.getElementById("inputAuto").value
-      if(inputAuto == odp1){
-        console.log(wylosowany) ;
-        wylosowany.classList.remove("checked") ;
-        wylosowany.classList.add("true") ;
-        randomElements();
-      }
-      else {
-        wylosowany.classList.remove("checked") ;
-        wylosowany.classList.add("false") ;
-        randomElements();
-      }
+  if(event.keyCode == 13){
+    inputAuto = document.getElementById("inputAuto").value
+    if(inputAuto == answer){
+      randomElement.classList.remove("checked");
+      randomElement.classList.add("true");
+      randomElement.classList.add("pink");
+      h++ ;
+      document.getElementById("score").innerHTML = h ;
     }
+    else {
+      randomElement.classList.remove("checked");
+      randomElement.classList.add("false");
+      randomElement.classList.add("pink");
+    }
+    randomElements();
+    document.getElementById("inputAuto").value = "";
   }
+}
 
+resetButton.addEventListener("click", resetGame);
+function resetGame(e){
+  for(x = 0; x < elementsTable.length; x++){
+    elementsTable[x].parentNode.classList.remove("false");
+    elementsTable[x].parentNode.classList.remove("true");
+    elementsTable[x].parentNode.classList.remove("checked");
+    elementsTable[x].parentNode.classList.remove("pink");
+    elementsTable[x].parentNode.classList.add("pink");
+  }
+  elementChoosed = [] ;
+  document.getElementById("startButton").className = "btn btn-secondary show";
+  document.getElementById("inputAuto").className = "hide";
+  document.getElementById("resetButton").className = "hide";
+  document.getElementById("score").innerHTML = h=0 ;
+  document
+}
