@@ -256,15 +256,19 @@ textarea:focus, input:focus{
 
 
 
-<div style="color: white; font-size: 50px; text-align: center;">
-  Wynik:
-    <div id="score">
-     0
-    </div>
+<div id="score" style="color: white; font-size: 50px; text-align: center;">
+  Wynik: 0
 </div>
+<div class="hide" id="timer" style="color: white; font-size: 50px; text-align: center;">
 
-
-
+</div>
+<div id="chance" style="color: white; font-size: 50px; text-align: center;"></div>
+<br>
+<div id="chanceInput" class="easy d-flex justify-content-center">
+  <div>
+    <input id="inputElem" class="hide" type="text" onkeydown="checkEle(event)">
+  </div>
+</div>
 
   <!--row 1-->
   <div class="container">
@@ -533,7 +537,9 @@ textarea:focus, input:focus{
     <div style="text-align: center;">
       <button id="resetButton" type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Reset</button>
     </div>
-
+    <div id="chanceInput">
+      
+    </div>
     <script type="text/javascript" src="../js/pierwiastki.js"></script>
     <script type="text/javascript" src="../js/pierwiastek.js"></script>
     <script type="text/javascript" src="../js/autocomplete.js"></script>
