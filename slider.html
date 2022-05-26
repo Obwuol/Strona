@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        .grid-container {
+        display: grid;
+        grid-template-columns: 10% 79% 10%;
+        padding: 10px;
+        height: 500px;
+        }
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+        .grid-container2 {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 10px;
+        }
+        .grid-item {
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        margin: 1%;
+        }
+        .grid-item-long {
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        
+        }
+        img{
+        width:100px ;
+        height:180px ;
+        }
+        .prev, .next {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+        .prev:hover, .next:hover {
+         background-color: rgba(0,0,0,0.8);
+        }
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+        @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+        }
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(231, 247, 252);">
+<div style="background-color: lightblue;">
+<div class="grid-container">
+<div class="grid-item" style="position: relative;"><a class="prev" onclick="plusSlides(-1)"><img style="opacity: 0.5;" src="../img/lewo.png" alt=""></a></div>
+<div class="grid-item">
+<div class="slideshow-container">
+<div class="imageSlider">
+<div class="mySlides fade">
+<div class="numbertext fade"></div>
+<img src="../img/gory.jpg" style="width:100%;height: 365px;">
+</div>
+</div>
+<div class="dotsDiv">
+<span class="dot" onclick="currentSlide(1)"></span>
+</div>
+</div>
+</div>
+<div class="grid-item" style="position: relative;"><a class="next" onclick="plusSlides(1)"><img style="opacity: 0.5;" src="../img/prawo.png" alt="prawo"></a></div>
+</div>
+</div>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+var imagesSliderPath = [] ;
+imagesSliderPath[0] = 'gory' ;
+imagesSliderPath[1] = 'goryzima' ;
+imagesSliderPath[2] = 'tatry' ;
+imageElements = [] ;
+imageDiv = [] ;
+dotsElements = [] ;
+y = 0;
+
+for(x=0 ; x < imagesSliderPath.length ; x++) {
+    imageDiv[x] = document.createElement("div");
+    imageDiv[x].classList.add("mySlides","fade");
+    imageDiv[x].style.display = "none"
+    imageElements[x] = document.createElement("img");
+    imageElements[x].classList.add("images");
+    imageElements[x].setAttribute("src","./img/"+imagesSliderPath[x]+".jpg");
+    imageElements[x].style.width = "100%" ;
+    imageElements[x].style.height = "365px" ;
+    //imageElements[x].style.display = "none";
+    imageDiv[x].append(imageElements[x]);
+    document.getElementsByClassName("imageSlider")[0].append(imageDiv[x]);
+    dotsElements[x] = document.createElement("span");
+    dotsElements[x] = document.createElement("span");
+    dotsElements[x].classList.add("dot");
+    y++;
+    dotsElements[x].setAttribute("onclick","currentSlide("+y+")");
+    document.getElementsByClassName("dotsDiv")[0].append(dotsElements[x]);
+    
+}
+</script>
+</body>
+</html>
