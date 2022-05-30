@@ -103,11 +103,12 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+  
   if(scor == 1){
     document.getElementById("chance").innerHTML = "Wybierz pierwiastek" ;
-    document.getElementsByClassName("checked").className = "pink"
-    document.getElementById("inputElem").className = "show"
-    inputElem = document.getElementById("inputElem").value
+    document.getElementsByClassName("checked").className = "pink" ;
+    document.getElementsByClassName("pink").setAttribute("type", "button")
+    document.getElementsByClassName
 }
 
   if (distance < 0) {
@@ -115,14 +116,60 @@ var x = setInterval(function() {
     document.getElementById("timer").innerHTML = "KONIEC GRY";
   }
 }, 1000);
-  function checkEle(event){
-    if(event.keyCode == 13){
-      inputElem = document.getElementById("inputElem").value
-      for(x= 0 ; x < elements.length ; x++) {
-        if(inputElem == elements[x][0]){
-              elementsTable[x].parentNote.className = "checked";
-        }
 
-      }
+  //Slider
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
     }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  
+  var imagesSliderPath = [] ;
+  imagesSliderPath[0] = 'gory' ;
+  imagesSliderPath[1] = 'goryzima' ;
+  imagesSliderPath[2] = 'tatry' ;
+  imageElements = [] ;
+  imageDiv = [] ;
+  dotsElements = [] ;
+  y = 0;
+  
+  for(x=0 ; x < imagesSliderPath.length ; x++) {
+      imageDiv[x] = document.createElement("div");
+      imageDiv[x].classList.add("mySlides","disappear");
+      imageDiv[x].style.display = "none"
+      imageElements[x] = document.createElement("img");
+      imageElements[x].classList.add("images");
+      imageElements[x].setAttribute("src","./img/"+imagesSliderPath[x]+".jpg");
+      imageElements[x].style.width = "100%" ;
+      imageElements[x].style.height = "365px" ;
+      //imageElements[x].style.display = "none";
+      imageDiv[x].append(imageElements[x]);
+      document.getElementsByClassName("imageSlider")[0].append(imageDiv[x]);
+      dotsElements[x] = document.createElement("span");
+      dotsElements[x].classList.add("dot");
+      y++;
+      dotsElements[x].setAttribute("onclick","currentSlide("+y+")");
+      document.getElementsByClassName("dotsDiv")[0].append(dotsElements[x]);
+      
   }

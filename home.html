@@ -7,58 +7,339 @@
     <title>testy</title>
 
     <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-</head>
-<body>
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+    rel="stylesheet"
+    />
     <style>
-      td{
-        height: 100px;
-        width: 100px;
-      }
+
+
+/* line 1, ../../src/scss/global/_flex.scss */
+.layout-horizontal {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+/* line 5, ../../src/scss/global/_flex.scss */
+.layout-vertical {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/* line 9, ../../src/scss/global/_flex.scss */
+.layout-horizontal,
+.layout-vertical {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+/* line 14, ../../src/scss/global/_flex.scss */
+.layout-horizontal.flex-children > div,
+.layout-vertical.flex-children > div {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+/* line 21, ../../src/scss/global/_flex.scss */
+.layout-horizontal.grow-children > div,
+.layout-vertical.grow-children > div {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+/* line 27, ../../src/scss/global/_flex.scss */
+.layout-horizontal.shrink-children > div,
+.layout-vertical.shrink-children > div {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+/* line 32, ../../src/scss/global/_flex.scss */
+.layout-horizontal.flex-wrap,
+.layout-vertical.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+/* line 36, ../../src/scss/global/_flex.scss */
+.layout-horizontal.pack-start,
+.layout-vertical.pack-start {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+/* line 40, ../../src/scss/global/_flex.scss */
+.pack-end,
+.pack-end {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+/* line 44, ../../src/scss/global/_flex.scss */
+.layout-horizontal.pack-center,
+.layout-vertical.pack-center {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+/* line 48, ../../src/scss/global/_flex.scss */
+.layout-horizontal.space-between,
+.layout-vertical.space-between {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+/* line 52, ../../src/scss/global/_flex.scss */
+.layout-horizontal.space-around,
+.layout-vertical.space-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+/* line 56, ../../src/scss/global/_flex.scss */
+.layout-horizontal.align-start,
+.layout-vertical.align-start {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+/* line 60, ../../src/scss/global/_flex.scss */
+.layout-horizontal.align-end,
+.layout-vertical.align-end {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+/* line 64, ../../src/scss/global/_flex.scss */
+.layout-horizontal.align-center,
+.layout-vertical.align-center {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+/* line 68, ../../src/scss/global/_flex.scss */
+.layout-horizontal.align-baseline,
+.layout-vertical.align-baseline {
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+/* line 73, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.flex, .layout-horizontal > div.flex-1,
+.layout-vertical > div.flex,
+.layout-vertical > div.flex-1 {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+/* line 78, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.flex-2,
+.layout-vertical > div.flex-2 {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+}
+/* line 82, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.flex-3,
+.layout-vertical > div.flex-3 {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+}
+/* line 86, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.grow, .layout-horizontal > div.grow-1,
+.layout-vertical > div.grow,
+.layout-vertical > div.grow-1 {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+/* line 91, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.grow-2,
+.layout-vertical > div.grow-2 {
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+/* line 95, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.grow-3,
+.layout-vertical > div.grow-3 {
+    -webkit-flex-grow: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+}
+/* line 99, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.shrink, .layout-horizontal > div.shrink-1,
+.layout-vertical > div.shrink,
+.layout-vertical > div.shrink-1 {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+/* line 104, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.shrink-2,
+.layout-vertical > div.shrink-2 {
+    -webkit-flex-shrink: 2;
+    -ms-flex-negative: 2;
+    flex-shrink: 2;
+}
+/* line 108, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.shrink-3,
+.layout-vertical > div.shrink-3 {
+    -webkit-flex-shrink: 3;
+    -ms-flex-negative: 3;
+    flex-shrink: 3;
+}
+/* line 112, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.align-box-start,
+.layout-vertical > div.align-box-start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+/* line 116, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.align-box-end,
+.layout-vertical > div.align-box-end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+/* line 120, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.align-box-center,
+.layout-vertical > div.align-box-center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+/* line 124, ../../src/scss/global/_flex.scss */
+.layout-horizontal > div.align-box-baseline,
+.layout-vertical > div.align-box-baseline {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}
+
+
+.display-container {
+  background-color: #fff;
+  width: 100%;
+}
+
+.layout-horizontal,
+.layout-vertical {
+  background-color: ddd;
+}
+.layout-horizontal > div,
+.layout-vertical > div {
+  padding: 10px;
+}
+
+.dead-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: Helvetica;
+}
+.flex-1 {
+  flex:1 ;
+}
+.flex-4 {
+  flex:4 ;
+  display: flex;
+  gap:15px ;
+}
+.flex-2 {
+  flex:2 ;
+}
+.flex-3 {
+  flex:3 ;
+  display: flex;
+  gap:15px ;
+}
+.header-blue{
+  font-weight: 400;
+  font-size: 12px;
+  color: #005ca9;
+}
+
     </style>
-
-<h1 class="animate__animated animate__bounce">An animated element</h1>
-<div class="animate__animated animate__bounce animate__delay-2s">Example</div>
-<button class="md-button" id="button">Here</button>
-<script type="text/javascript" src="../js/app.js"></script>
-<hr>
-    <div>
-<table id="tabela" border="1px" style="border-color: rebeccapurple; border-spacing: 0px; text-align: center; font-size: 70px;">
-<tr>
- <td id="p1"></td>
- <td id="p2"></td>
- <td id="p3"></td>
-</tr>
-<tr>
- <td id="p4"></td>
- <td id="p5"></td>
- <td id="p6"></td>
-</tr>
-<tr>
- <td id="p7"></td>
- <td id="p8"></td>
- <td id="p9"></td>
-</tr>
-</table>
-<button id="reset" class="invisible">RESET</button>
+</head>
+<body style="font-size: 13px;">
+  <div class="display-container">
+    <div style="display: flex; padding: 0.5%; border-bottom: 1px solid rgb(223, 223, 223);">
+      <div class="flex-2"></div>
+    <div class="flex-3">
+      <div style="color: red;">PROMOCJE</div>
+      <div class="header-blue">SKLEPY</div>
+      <div class="header-blue">RATY</div>
+      <div class="header-blue">REKLAMACJE</div>
+      <div class="header-blue">KONTAKT</div>
+    </div>
+    <div class="flex-3 pack-end">
+      <div class="header-blue"><img src="../img/accpic.png" style="width: 15px;height:15px">ZALOGUJ SIĘ</div>
+      <div class="header-blue"><img src="../img/helpline.png" style="width: 15px;height:15px">885 885 885 - DO 22:00!</div>
+      </div>
+    <div class="flex-2"></div>
   </div>
-<div id="info" style="text-align: center;"></div>
+  <div style="display: flex; padding: 1.5%;">
+    <div class="flex-2"></div>
+      <div style="flex:2;display:flex"><img src="//f00.esfr.pl/img/desktop/euro/logo.png" style="height: 40px;"></div>
+      <div style="flex:2;display:flex"></div>
+      <div class="pack-end" style="flex:2;display:flex"><img src="../img/cartbox.png" style="width: 47px;height: 47px;"></div>
+    <div class="flex-2"></div>
+  </div>
+  <div style="background-color: #ffe843;">
+    <div></div>
+    <div class="pack-end" style="flex:6;display: flex;">
+      <div>AGD DUŻE</div>
+      <div>AGD MAŁE</div>
+      <div>TV,AUDIO</div>
+      <div>SMARTFONY I GADŻETY</div>
+      <div>KOMPUTERY I TABLETY</div>
+      <div>KONSOLE I GRY</div>
+    </div>
+    <div class="layout-horizontal pack-center" style ="width: 33%;float: none;font-weight: 700;">
+      <div style="width: 23%;">TWOJE ZAKUPY STREFA KLIENTA</div>
+    </div>
+  </div>
+    <div style="height: 500px;background-color: #edebf1;">
+      <div class="layout-horizontal pack-center" style="width: 98%;height: 85%;">
+        <div style="width: 33%">Box 1</div>
+        <div style="width: 33%">Box 2</div>
+      </div>
+      <div class="layout-horizontal pack-center" style="width: 98%;text-align: center;">
+        <div style="width: 8%">72H Szybkich okazji</div>
+        <div style="width: 8%">Ultra obniżki</div>
+        <div style="width: 8%">Mega Rabaty</div>
+        <div style="width: 8%">Piąty produkt za 1 zł!</div>
+        <div style="width: 6%">Hity dnia</div>
+        <div style="width: 10%">Tydzień promocji Samsung</div>
+        <div style="width: 8%">14 dni z Microsoft</div>
+        <div style="width: 8%">30 rat x 0%<br>na ekspresy</div>
+      </div>
+    </div>
+  </div>
 
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-  <label class="form-check-label" for="flexRadioDefault1"> Default radio </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-  <label class="form-check-label" for="flexRadioDefault2"> Default checked radio </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-  <label class="form-check-label" for="flexRadioDefault1"> Default radio </label>
-</div>
 
-<script type="text/javascript" src="../js/app.js"></script>
+
+
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
 </body>
 </html>
