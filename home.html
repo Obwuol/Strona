@@ -258,285 +258,138 @@
 body {
   font-family: Helvetica;
 }
-.flex-1 {
-  flex:1 ;
+.header{
+  display: grid;
+  grid-template-columns: 150px 1fr 4fr 2fr 150px;
+  border-bottom: 1px solid rgb(212, 212, 212);
 }
-.flex-4 {
-  flex:4 ;
-  display: flex;
-  gap:15px ;
+.header-elements{
+  justify-content: center;
+  text-align: center;
+  display: grid;
 }
-.flex-2 {
-  flex:2 ;
+.upper{
+  display: grid;
+  justify-content: center;
 }
-.flex-3 {
-  flex:3 ;
-  display: flex;
-  gap:15px ;
+.h-form{
+  grid-template-columns: 1fr;
+  justify-content: left;
+  border: 1px solid gray;
 }
-.header-blue{
-  font-weight: 400;
-  font-size: 12px;
-  color: #005ca9;
+.select-header{
+  color: black;
+  border: none;
+  height: 100%;
 }
-.header-h1{
-  font-size: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  max-height: 109px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-#div-1{
-background-color: #153CE2;
-color: white ;
-line-height: 38px;
-}
-#div-2{
-background-color: #153CE2;
-color: white ;
-}
-#div-3{
-background-color: #153CE2;
-color: white ;
-}
-#div-4{
-background-color: #153CE2;
-color: white ;
-}
-#div-5{
-background-color: #153CE2;
-color: white ;
-}
-#div-6{
-background-color: #153CE2;
-color: white ;
-}
-#div-7{
-background-color: #153CE2;
-color: white ;
-}
-.header-p-right{
-border-radius: 10px;
-font-size: 15px;
-color: black;
-border: 1px solid #ffe843;
-max-width: fit-content;
-padding: 11px 15px 10px 15px;
-background-color: #ffe843;
-font-weight: 600;
-font-family: sans-serif;
-}
-.header-p-left{
-  font-size: 15px;
-  font-family: sans-serif;
+.button-header{
+  background-color: #ff5a00;
   color: white;
-  font-weight: 600;
+  border: none;
+  height: 100%;
+  width: 16%;
+  font-size: 15px;
 }
-.header-img{
-  width: 100%;
+.h-box{
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
-.card{
-  max-width: 18%;
-  height: 400px;
+.main{
+  display: grid;
+  grid-template-columns: 150px 1fr 4fr 1fr 150px;
+  background-color: rgb(235, 235, 235);
+  padding: 19px;
+}
+.main-bg{
+  background-color: white;
+  padding: 10px;
+}
+.main-left{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgb(172, 172, 172);
+  justify-items: center;
 }
     </style>
 </head>
 <body style="font-size: 13px;">
   <div class="display-container">
-    <div style="display: flex; padding: 0.5%; border-bottom: 1px solid rgb(223, 223, 223);"> <!--TU-->
-      <div class="flex-2"></div>
-    <div class="flex-3" style="font-size: 12px; font-family:sans-serif;">
-      <div style="color: red;">PROMOCJE</div>
-      <div class="header-blue">SKLEPY</div>
-      <div class="header-blue">RATY</div>
-      <div class="header-blue">REKLAMACJE</div>
-      <div class="header-blue">KONTAKT</div>
+
+    <div class="upper">
+      <img src="https://a.allegroimg.com/original/12b999/0ad0bb234c30abec2f54a7d9c41c" alt="pampersy">
     </div>
-    <div class="flex-3 pack-end">
-      <div class="header-blue"><img src="../img/accpic.png" style="width: 15px;height:15px">ZALOGUJ SIĘ</div>
-      <div class="header-blue"><img src="../img/helpline.png" style="width: 15px;height:15px">885 885 885 - DO 22:00!</div>
+    <br>
+    <div class="header">
+      <div class="header-elements"></div>
+      <div class="header-elements" style="justify-content: left;">
+      <img src="https://a.allegroimg.com/original/1201da/b8806483460d99ec3739941289ab" alt="allegro">
       </div>
-    <div class="flex-2"></div>
-  </div> <!--TU-->
-  <div style="display: flex; padding: 1.5%;"> <!--TU-->
-    <div class="flex-2"></div>
-      <div style="flex:2;display:flex"><img src="//f00.esfr.pl/img/desktop/euro/logo.png" style="height: 40px;"></div>
-      <div style="flex:2;display:flex;">
-        <label for="fname"></label>
-        <input type="text" placeholder="&nbsp;  Wpisz nazwę, markę lub cechę produktu..." id="fname" name="fname" style="flex: 10;border-radius: 26px; border-color: rgb(190, 190, 190)">
+
+      <div class="header-elements h-form">
+        <form>
+          <input type="text" placeholder="czego szukasz?" style="width: 60%;height:100%; border: none;"><span>szukaj wielu</span>
+          <select class="select-header" style="border-left: 1px solid grey; border-right: none; border-bottom: none; border-top: none;">
+            <option value="1">Wszystkie kategorie</option>
+            <option value="2">test 2</option>
+            <option value="3">test 3</option>
+          </select>
+          <button class="button-header">
+            szukaj
+          </button>
+        </form>
       </div>
-      <div class="pack-end" style="flex:2;display:flex"><img src="../img/cartbox.png" style="width: 47px;height: 47px;"></div>
-    <div class="flex-2"></div>
-  </div> <!--TU-->
-  <div style="background-color: #ffe843;display: flex;"> <!--TU-->
-    <div class="flex-2"></div>
-    <div class="flex-4" style="display: flex;font: 13px;font-family: sans-serif; font-weight: 600;  align-items: center; justify-content: center;">
-      <div>AGD DUŻE</div>
-      <div>AGD MAŁE</div>
-      <div>TV,AUDIO</div>
-      <div>SMARTFONY I GADŻETY</div>
-      <div>KOMPUTERY I TABLETY</div>
-      <div>KONSOLE I GRY</div>
+
+      <div class="header-elements h-box" style="justify-content: right;">
+        <div></div>
+        <div><img src="../img/header-box.png"></div>
+        <div><form>
+          <select>
+            <option>Moje allegro</option>
+          </select>
+        </form></div>
+      </div>
+
+      <div class="header-elements"></div>
+      <br>
     </div>
-    <div class="flex-2 pack-end" style ="display: flex; font: 12px;font-family: sans-serif; font-weight: 600;">
-      <div style="background-color: #005CA9; color: white;line-height: 14px; text-align: center; padding-top: 2%; padding-left: 3%; padding-right: 3%; padding-bottom: 1%;">TWOJE ZAKUPY<br><font style="font-size: 10px;font-weight: 400;">STREFA KLIENTA</font></div>
-    </div>
-    <div class="flex-2"></div>
-  </div> <!--TU-->
-    <div id="carousel-background" style="background-color: #153CE2; display: flex; height: 650px;"> <!--TU--> 
-      <div class="flex-2">        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a></div>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" style="flex:6; display:flex">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active" style="background-color: #153CE2;">
-          <div class="header-h1" id="div-1">OSTATNIE GODZINY!<br> SKORZYSTAJ Z SZYBKICH OKAZJI!<br> I KUPUJ NA ZERORATY, RRSO 0%</div>
+    <div class="main">
+      <div></div>
+      <div class="main-bg">
+        <div class="main-left"><p>DZIAŁY &nbsp;</p><p>KORZYŚCI</p></div>
+        <div>
           <br>
-          <div style="display: flex; align-items: center; ">
-          <p class="header-p-left">WYBRANE PRODUKTY Z PROMOCJI: &nbsp;</p><p class="header-p-right" type="button">ZOBACZ WSZYSTKIE PRODUKTY</p>
-          </div>
-<div style="display: flex; gap:1%">
-          <div class="card">
-            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid header-img"/>
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </div>
-            <div class="card-body">
-              <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-            </a>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid header-img"/>
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </div>
-            <div class="card-body">
-              <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-            </a>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid header-img"/>
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </div>
-            <div class="card-body">
-              <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-            </a>
-            </div>
-          </div>
-          <div>
-            
-          </div>
-</div>
-
-          </div>
-      <div class="item" style="background-color: #153CE2;">
-        <div class="header-h1" id="div-1">KUP SMARTFON<br> ZYSKAJ RABAT -70%<br> NA WYBRANY GADŻET</div>
-        <br>
-        <div style="display: flex; align-items: center; ">
-        <p class="header-p-left">DOWIEDZ SIĘ WIĘCEJ &nbsp;</p><p class="header-p-right" type="button">POZNAJ PRODUKTY W PROMOCJI</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/laptop-a4c88ba8c9.svg" style="width:40px ;height:28px">Elektronika</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/dress-c001e8d7f1.svg" style="width:40px ;height:28px">Moda</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/house-and-tree-3d644b1630.svg" style="width:40px ;height:28px">Dom i Ogród</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/basket-f6c9c75c2a.svg" style="width:40px ;height:28px">Supermarket</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/baby-58992b9d89.svg" style="width:40px ;height:28px">Dziecko</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/lipstick-974cf1db4e.svg" style="width:40px ;height:28px">Uroda</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/first-aid-0c601a56cb.svg" style="width:40px ;height:28px">Zdrowie</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/book-58344d0822.svg" style="width:40px ;height:28px">Kultura i rozrywka</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/ball-f1f0883cc6.svg" style="width:40px ;height:28px">Sport i turystyka</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/car-0b4e0bbc3b.svg" style="width:40px ;height:28px">Motoryzacja</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/house-and-magnifying-glass-7d24599ece.svg" style="width:40px ;height:28px">Nieruchomości</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/stamp-d912af3b1c.svg" style="width:40px ;height:28px">Kolekcje i sztuka</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/skyscraper-1989b66d12.svg" style="width:40px ;height:28px">Firma i usługi</p>
+          <p>&nbsp;<img src="https://assets.allegrostatic.com/metrum/icon/tickets-b3e077f330.svg" style="width:40px ;height:28px">eBilet.pl</p>
+          <p>&nbsp;<img src="https://a.allegroimg.com/original/128d44/a65b526446de941d12f9faa1337f" style="width:40px ;height:28px">Allegro Lokalnie</p>
         </div>
-<div style="display: flex; gap:1%">
-        <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid header-img"/>
-            <a href="#!">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-          </a>
-          </div>
-        </div>
+      </div>
 
-
-        <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid header-img"/>
-            <a href="#!">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-          </a>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid header-img"/>
-            <a href="#!">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-          </div>
-          <div class="card-body">
-            <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-          </a>
-          </div>
-        </div>
-</div>
-
-        </div>
-      
-          <div class="item">
-            <div class="header-h1" >SPRAWMY SOBIE PREZENTY NA DZIEŃ DZIECKA! KORZYSTAJ Z MEGA RABATÓW!</div>
-          </div>
-
-          <div class="item">
-            <div class="header-h1" >WIELORABATY. PROMOCJA NA TYSIĄCE PRODUKTÓW ZERORATY DO 30 RAT 0%. RRSO 0%</div>
-          </div>
-      
-          <div class="item">
-            <div class="header-h1" >HITY DNIA! CODZIENNIE NOWA OFERTA I KUPUJ NA ZERORATY, RRSO 0%</div>
-          </div>
-
-          <div class="item">
-            <div class="header-h1" >RATA GRATIS! NA WYBRANE PRODUKTY MARKI SAMSUNG ZERORATY. RRSO 0%</div>
-          </div>
-      
-          <div class="item">
-            <div class="header-h1" >14 DNI OKAZJI NA PRODUKTY MICROSOFT</div>
-          </div>
-
-          <div class="item">
-            <div class="header-h1" >KUP SMARTFON ZYSKAJ RABAT -70% NA WYBRANY GADŻET</div>
-          </div>
-                <br>
-           <div style="text-align: center; display: flex; gap: 40px; justify-content: center; border-top: 2px solid rgb(223, 223, 223);">
-        <div>72H Szybkich okazji</div>
-        <div>Ultra obniżki</div>
-        <div>Mega Rabaty</div>
-        <div>Piąty produkt za 1 zł!</div>
-        <div>Hity dnia</div>
-        <div>Tydzień promocji Samsung</div>
-        <div>14 dni z Microsoft</div>
-        <div>30 rat x 0%<br>na ekspresy</div>
-          </div>
-        </div>
-        <!-- Left and right controls -->
-
+      <div>
 
       </div>
-      <div class="flex-2">        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a></div>
-    </div> <!--TU-->
-  </div>
 
+      <div>
+
+      </div>
+
+    </div>
+
+
+
+
+</div>
 
 
 
